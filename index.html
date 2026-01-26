@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kelompok5 PancasilaM</title>
+
+<style>
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #0f1218;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 18px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(15,18,24,0.85);
+  transition: 0.4s;
+  z-index: 1000;
+}
+
+header.scrolled {
+  background: #0f1218;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+nav a {
+  margin-left: 22px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #ff3b3b;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d") center/cover no-repeat;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero p {
+  max-width: 620px;
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* ================= SECTION ================= */
+section {
+  padding: 110px 80px;
+}
+
+.section-label {
+  color: #ff3b3b;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 36px;
+  margin: 10px 0 50px;
+}
+
+/* ================= FEATURES ================= */
+.features {
+  background: #151922;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  color: #111;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-img img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: 0.6s;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 25px;
+}
+
+.card-content h3 {
+  margin-bottom: 12px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ================= NEWS ================= */
+.news {
+  background: #fff;
+  color: #111;
+}
+
+.news-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
+
+.news-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.news-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.date {
+  display: inline-block;
+  margin-top: -18px;
+  background: #ff3b3b;
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.news-card h3 {
+  margin: 20px 0 8px;
+}
+
+.author {
+  font-size: 12px;
+  color: #777;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 26px;
+  border: 2px solid #111;
+  font-size: 12px;
+  text-decoration: none;
+  color: #111;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 768px){
+  header { padding: 18px 30px; }
+  h2 { font-size: 28px; }
+  .hero h1 { font-size: 36px; }
+}
+</style>
+</head>
+
+<body>
+
+<header id="navbar">
+  <div class="logo">Kelompok5 PancasilaM</div>
+  <nav>
+    <a href="#">Beranda</a>
+    <a href="#features">Fitur</a>
+    <a href="Artikel.html">Artikel</a>
+    <a href="#news">Berita</a>
+    <a href="Anggota.html">Anggota Kelompok</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Sila ke-4 Pancasila</h1>
+    <p>
+      Fokus bahasan jurnalistik kami: “Kerakyatan yang Dipimpin oleh
+      Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan”.
+    </p>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <span class="section-label">FITUR WEBSITE</span>
+  <h2>Fitur dari website ini</h2>
+
+  <div class="grid">
+    <div class="card reveal">
+         <div class="hero-buttons">
+        <a href="Artikel.html">
+      <div class="card-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-aTC7OE8hC50sKZCaQWJONb4MB2EUXAexng&s.jpg">
+      </div>
+      <div class="card-content">
+        <h3>Artikel Nilai Sila ke-4</h3>
+        <p>Pembahasan mendalam tentang nilai demokrasi dan partisipasi rakyat.</p>
+       
+        </div>
+        </a>
+        </div>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqKb3W5ktW3xfiiQ5Lenk23qQUzTk7Fj75Nw&s.jpg">
+      </div>
+      <div class="card-content">
+        <h3>Berita</h3>
+        <p>Kumpulan berita faktual yang berkaitan dengan sila ke-4 Pancasila.</p>
+      </div>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-img">
+        <img src="https://newnaratif.com/wp-content/uploads/2018/03/shutterstock_215935891-1024x657.jpg">
+      </div>
+      <div class="card-content">
+        <h3>Panduan Demokrasi</h3>
+        <p>Penjelasan istilah dan penerapan demokrasi dalam masyarakat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="news" id="news">
+  <span class="section-label">BERITA & ARTIKEL TERKAIT</span>
+  <h2>Berita / Artikel Sila ke-4</h2>
+
+  <div class="grid">
+    <div class="news-card reveal">
+      <img src="https://static.dw.com/image/75554238_1004.jpg">
+      <span class="date">Januari 19, 2026</span>
+      <h3>Isu Greenland Memanas, UE Rapat Darurat Hadapi Tarif Trump</h3>
+      <p class="author">Sumber: DW.com</p>
+      <a href="https://www.dw.com/id/isu-grinlandia-memanas-ue-rapat-darurat-hadapi-tarif-trump/a-75561486" target="_blank" class="btn">Baca Berita</a>
+    </div>
+  </div>
+</section>
+
+<section class="news" id="news">
+  
+
+  <div class="grid">
+    <div class="news-card reveal">
+      <img src="https://humas.polri.go.id/api/article-files/viewer/WhatsAppImage2026-01-07at13.15.55(1)_69357.jpeg">
+      <span class="date">Januari 7, 2026</span>
+      <h3>Polsek Sukadana Sambang dan Monitoring Rapat Minggon Desa, Wujud Peran Polri Jaga Kamtibmas dan Sinergi Pemerintahan Desa</h3>
+      <p class="author">Sumber: DW.com</p>
+      <a href="https://humas.polri.go.id/news/detail/2236095-polsek-sukadana-sambang-dan-monitoring-rapat-minggon-desa-wujud-peran-polri-jaga-kamtibmas-dan-sinergi-pemerintahan-desa" target="_blank" class="btn">Baca Berita</a>
+    </div>
+  </div>
+</section>
+
+
+
+<script>
+const navbar = document.getElementById("navbar");
+window.addEventListener("scroll", () => {
+  navbar.classList.toggle("scrolled", window.scrollY > 60);
+});
+
+const reveals = document.querySelectorAll(".reveal");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+},{ threshold: 0.15 });
+
+reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
