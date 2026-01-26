@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artikel – Sila ke-4 Pancasila</title>
+
+<style>
+/* ================= RESET ================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI", Arial, sans-serif;
+}
+
+body{
+  background:#0f1218;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* ================= NAVBAR (SAMA DENGAN HOME) ================= */
+header{
+  position:fixed;
+  width:100%;
+  top:0;
+  padding:18px 70px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(15,18,24,0.85);
+  transition:.4s;
+  z-index:1000;
+}
+
+header.scrolled{
+  background:#0f1218;
+  box-shadow:0 4px 20px rgba(0,0,0,.4);
+}
+
+.logo{
+  font-weight:700;
+  font-size:14px;
+  letter-spacing:1px;
+}
+
+nav a{
+  margin-left:22px;
+  color:#fff;
+  text-decoration:none;
+  font-size:13px;
+  position:relative;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:2px;
+  background:#ff3b3b;
+  transition:.3s;
+}
+
+nav a:hover::after,
+nav a.active::after{
+  width:100%;
+}
+
+/* ================= SECTION ================= */
+section{
+  padding:140px 80px 120px;
+}
+
+h1{
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.subtitle{
+  max-width:760px;
+  line-height:1.8;
+  color:#ccc;
+  margin-bottom:70px;
+}
+
+/* ================= GRID ARTIKEL ================= */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+  margin-bottom:100px;
+}
+
+.card{
+  background:#fff;
+  color:#111;
+  overflow:hidden;
+  transition:.4s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+.card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:25px;
+}
+
+.card-content h3{
+  margin-bottom:12px;
+}
+
+.card-content p{
+  font-size:14px;
+  line-height:1.7;
+  color:#444;
+}
+
+.read{
+  display:inline-block;
+  margin-top:16px;
+  font-size:12px;
+  border:2px solid #111;
+  padding:6px 18px;
+  text-decoration:none;
+  color:#111;
+  transition:.3s;
+}
+
+.read:hover{
+  background:#111;
+  color:#fff;
+}
+
+/* ================= ARTIKEL PANJANG ================= */
+.full-article{
+  max-width:900px;
+  margin-bottom:80px;
+}
+
+.full-article h2{
+  font-size:32px;
+  margin-bottom:20px;
+}
+
+.full-article p{
+  line-height:1.9;
+  margin-bottom:18px;
+  color:#ddd;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+  header{padding:18px 30px}
+  section{padding:130px 30px}
+  h1{font-size:32px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header id="navbar">
+  <div class="logo">Kelompok5 PancasilaM</div>
+  <nav>
+    <a href="HomePancasila.html">Beranda</a>
+    <a href="HomePancasila.html#features">Fitur</a>
+    <a href="Artikel.html" class="active">Artikel</a>
+    <a href="HomePancasila.html#news">Berita</a>
+    <a href="anggota.html">Anggota Kelompok</a>
+  </nav>
+</header>
+
+<section>
+
+  <h1>Artikel Sila ke-4 Pancasila</h1>
+  <p class="subtitle">
+    Kumpulan artikel analitis mengenai
+    <b>“Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan
+    dalam Permusyawaratan/Perwakilan”</b>
+    sebagai landasan demokrasi Pancasila dalam kehidupan
+    berbangsa, bernegara, dan bermasyarakat.
+  </p>
+
+  <!-- ================= PREVIEW ARTIKEL ================= -->
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620">
+      <div class="card-content">
+        <h3>Makna Filosofis Sila ke-4</h3>
+        <p>Pemaknaan mendalam sila ke-4 sebagai konsep kedaulatan rakyat yang beretika.</p>
+        <a href="#artikel1" class="read">Baca Selengkapnya</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df">
+      <div class="card-content">
+        <h3>Sila ke-4 dalam Sistem Demokrasi Indonesia</h3>
+        <p>Analisis peran sila ke-4 dalam sistem demokrasi konstitusional Indonesia.</p>
+        <a href="#artikel2" class="read">Baca Selengkapnya</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
+      <div class="card-content">
+        <h3>Implementasi Musyawarah dalam Kehidupan Sosial</h3>
+        <p>Penerapan nilai musyawarah dalam keluarga, pendidikan, dan masyarakat.</p>
+        <a href="#artikel3" class="read">Baca Selengkapnya</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ARTIKEL LENGKAP ================= -->
+
+  <div class="full-article" id="artikel1">
+  <h2>Makna Filosofis Sila ke-4 Pancasila</h2>
+
+  <p>
+    Sila ke-4 Pancasila, yaitu
+    <i>“Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan
+    dalam Permusyawaratan/Perwakilan”</i>,
+    mengandung makna filosofis yang mendalam mengenai konsep
+    kedaulatan rakyat dalam konteks kehidupan berbangsa dan bernegara.
+    Sila ini menegaskan bahwa kekuasaan tertinggi berada di tangan
+    rakyat, namun pelaksanaannya harus dijalankan secara bijaksana,
+    terarah, dan bertanggung jawab.
+  </p>
+
+  <p>
+    Secara filosofis, sila ke-4 menolak bentuk demokrasi yang bersifat
+    absolut dan individualistik. Demokrasi dalam perspektif Pancasila
+    tidak didasarkan semata-mata pada mekanisme suara terbanyak,
+    melainkan pada proses musyawarah yang mengedepankan akal sehat,
+    pertimbangan moral, dan nilai kemanusiaan. Dengan demikian,
+    keputusan yang dihasilkan diharapkan mencerminkan keadilan
+    substantif, bukan sekadar kemenangan kelompok tertentu.
+  </p>
+
+  <p>
+    Konsep <b>hikmat kebijaksanaan</b> dalam sila ke-4 menunjukkan bahwa
+    setiap keputusan publik harus lahir dari proses pemikiran yang
+    matang, rasional, dan berorientasi pada kepentingan bersama.
+    Hikmat tidak hanya berarti kecerdasan intelektual, tetapi juga
+    mencakup kebijaksanaan moral, empati sosial, serta tanggung jawab
+    etis terhadap dampak keputusan yang diambil.
+  </p>
+
+  <p>
+    Sementara itu, prinsip <b>permusyawaratan</b> mencerminkan nilai
+    dialog dan keterbukaan dalam pengambilan keputusan. Musyawarah
+    menempatkan setiap individu pada posisi yang setara untuk
+    menyampaikan pendapat, mendengarkan pandangan orang lain, serta
+    mencari titik temu demi tercapainya kesepakatan bersama.
+    Nilai ini memperkuat semangat persatuan dan menghindari dominasi
+    kekuasaan oleh segelintir pihak.
+  </p>
+
+  <p>
+    Aspek <b>perwakilan</b> dalam sila ke-4 memiliki makna filosofis
+    bahwa tidak seluruh rakyat dapat terlibat langsung dalam setiap
+    proses pengambilan keputusan negara. Oleh karena itu, rakyat
+    memberikan mandat kepada wakil-wakilnya melalui mekanisme yang sah
+    dan konstitusional. Para wakil rakyat tersebut berkewajiban
+    menjalankan amanah dengan penuh tanggung jawab, kejujuran, dan
+    integritas moral.
+  </p>
+
+  <p>
+    Dengan demikian, sila ke-4 Pancasila mengajarkan bahwa demokrasi
+    bukan sekadar prosedur politik, melainkan suatu sistem nilai yang
+    menuntut kedewasaan berpikir, kebijaksanaan bertindak, serta
+    komitmen terhadap keadilan sosial. Nilai filosofis ini menjadi
+    fondasi penting dalam membangun kehidupan demokratis yang
+    beradab, beretika, dan berorientasi pada kesejahteraan bersama.
+  </p>
+</div>
+
+
+  <div class="full-article" id="artikel2">
+  <h2>Sila ke-4 dalam Sistem Demokrasi Indonesia</h2>
+
+  <p>
+    Sistem demokrasi Indonesia secara fundamental berlandaskan pada
+    nilai-nilai Pancasila, khususnya sila ke-4 yang menegaskan prinsip
+    <i>“Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam
+    Permusyawaratan/Perwakilan”</i>. Prinsip ini menjadi ciri khas
+    demokrasi Indonesia yang membedakannya dari model demokrasi
+    liberal yang berkembang di negara-negara Barat.
+  </p>
+
+  <p>
+    Demokrasi Pancasila tidak menempatkan kebebasan individu sebagai
+    nilai absolut, melainkan mengintegrasikan kebebasan tersebut
+    dengan tanggung jawab moral dan kepentingan kolektif. Dalam
+    konteks ini, sila ke-4 berfungsi sebagai pedoman normatif agar
+    pelaksanaan demokrasi tidak terjebak pada praktik politik yang
+    transaksional, populis, atau semata-mata berbasis kekuatan
+    mayoritas.
+  </p>
+
+  <p>
+    Dalam praktik ketatanegaraan, sila ke-4 tercermin melalui sistem
+    perwakilan rakyat yang dijalankan oleh lembaga-lembaga negara,
+    seperti Dewan Perwakilan Rakyat (DPR), Dewan Perwakilan Daerah
+    (DPD), serta lembaga eksekutif yang dipilih melalui mekanisme
+    demokratis. Para wakil rakyat tersebut memperoleh mandat langsung
+    dari rakyat dan memiliki kewajiban moral serta konstitusional
+    untuk memperjuangkan aspirasi masyarakat secara adil dan
+    bertanggung jawab.
+  </p>
+
+  <p>
+    Prinsip <b>permusyawaratan</b> dalam sila ke-4 menuntut agar setiap
+    proses pengambilan keputusan politik dilakukan melalui dialog,
+    pertimbangan rasional, serta penghormatan terhadap perbedaan
+    pendapat. Musyawarah tidak hanya dipahami sebagai prosedur
+    formal, tetapi sebagai mekanisme etis untuk mencapai keputusan
+    yang mencerminkan kepentingan bersama dan menjaga persatuan
+    bangsa.
+  </p>
+
+  <p>
+    Selain itu, konsep <b>hikmat kebijaksanaan</b> mengandung tuntutan
+    agar para penyelenggara negara memiliki kedewasaan intelektual
+    dan moral. Keputusan politik yang diambil tidak boleh didasarkan
+    pada kepentingan kelompok, tekanan kekuasaan, atau kepentingan
+    jangka pendek, melainkan pada pertimbangan nilai keadilan,
+    kemanusiaan, dan kesejahteraan rakyat secara menyeluruh.
+  </p>
+
+  <p>
+    Dalam konteks kehidupan demokrasi modern, sila ke-4 juga berperan
+    sebagai landasan etis untuk mencegah penyalahgunaan kekuasaan.
+    Prinsip musyawarah dan perwakilan mengharuskan adanya mekanisme
+    pengawasan, akuntabilitas, serta transparansi dalam penyelenggaraan
+    pemerintahan. Dengan demikian, demokrasi tidak hanya berjalan
+    secara prosedural, tetapi juga substansial.
+  </p>
+
+  <p>
+    Secara keseluruhan, sila ke-4 Pancasila menempatkan demokrasi
+    sebagai sarana untuk mewujudkan tujuan negara, bukan sebagai
+    tujuan itu sendiri. Demokrasi Indonesia diarahkan untuk
+    menciptakan keadilan sosial, menjaga persatuan nasional, serta
+    mewujudkan kesejahteraan umum melalui proses pengambilan
+    keputusan yang bijaksana, partisipatif, dan berorientasi pada
+    kepentingan rakyat.
+  </p>
+</div>
+
+
+  <div class="full-article" id="artikel3">
+  <h2>Implementasi Musyawarah dalam Kehidupan Sosial</h2>
+
+  <p>
+    Implementasi musyawarah sebagaimana diamanatkan dalam sila ke-4
+    Pancasila tidak hanya berlaku dalam lingkup ketatanegaraan,
+    melainkan juga memiliki peranan penting dalam kehidupan sosial
+    masyarakat. Musyawarah merupakan sarana utama untuk membangun
+    hubungan sosial yang harmonis, adil, dan berorientasi pada
+    kepentingan bersama.
+  </p>
+
+  <p>
+    Dalam lingkungan keluarga, musyawarah menjadi fondasi awal
+    pendidikan demokrasi. Proses pengambilan keputusan yang melibatkan
+    seluruh anggota keluarga, seperti penentuan aturan bersama atau
+    penyelesaian konflik, mencerminkan penghargaan terhadap pendapat
+    setiap individu. Praktik ini menanamkan nilai keterbukaan,
+    tanggung jawab, serta sikap saling menghormati sejak usia dini.
+  </p>
+
+  <p>
+    Di lingkungan pendidikan, musyawarah berperan sebagai instrumen
+    pembentukan karakter peserta didik. Diskusi kelas, rapat
+    organisasi siswa, serta forum musyawarah antara pendidik dan
+    peserta didik mencerminkan penerapan nilai demokrasi Pancasila
+    secara konkret. Melalui proses ini, peserta didik belajar
+    menyampaikan pendapat secara santun, menerima perbedaan, dan
+    mencapai kesepakatan secara kolektif.
+  </p>
+
+  <p>
+    Dalam kehidupan bermasyarakat, musyawarah menjadi mekanisme utama
+    dalam pengambilan keputusan bersama, seperti perencanaan kegiatan
+    lingkungan, penyelesaian konflik sosial, dan penentuan kebijakan
+    tingkat lokal. Musyawarah mendorong partisipasi aktif warga,
+    memperkuat rasa kebersamaan, serta meminimalisasi potensi konflik
+    akibat perbedaan kepentingan.
+  </p>
+
+  <p>
+    Selain itu, musyawarah juga berperan sebagai sarana pembelajaran
+    sosial yang menumbuhkan kesadaran akan pentingnya kepentingan
+    bersama di atas kepentingan pribadi atau kelompok. Proses ini
+    mengajarkan bahwa keputusan yang baik adalah keputusan yang mampu
+    mengakomodasi berbagai kepentingan secara adil dan proporsional.
+  </p>
+
+  <p>
+    Dalam konteks masyarakat modern yang plural dan dinamis,
+    implementasi musyawarah menghadapi berbagai tantangan, seperti
+    sikap individualisme, perbedaan pandangan ideologis, serta
+    pengaruh media sosial. Oleh karena itu, penguatan nilai
+    musyawarah perlu dilakukan secara berkelanjutan melalui
+    pendidikan karakter, keteladanan tokoh masyarakat, serta
+    pembiasaan dialog yang konstruktif.
+  </p>
+
+  <p>
+    Secara keseluruhan, implementasi musyawarah dalam kehidupan sosial
+    merupakan wujud nyata internalisasi sila ke-4 Pancasila. Nilai ini
+    berfungsi sebagai perekat sosial yang menjaga persatuan,
+    memperkuat solidaritas, serta menciptakan tatanan masyarakat yang
+    demokratis, beradab, dan berkeadilan.
+  </p>
+</div>
+
+
+</section>
+
+<!-- ================= SCRIPT NAVBAR ================= -->
+<script>
+const navbar = document.getElementById("navbar");
+window.addEventListener("scroll", () => {
+  navbar.classList.toggle("scrolled", window.scrollY > 60);
+});
+</script>
+
+</body>
+</html>
