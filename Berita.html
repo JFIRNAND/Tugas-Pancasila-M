@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Berita</title>
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #0f1218;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 18px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(15,18,24,0.85);
+  transition: 0.4s;
+  z-index: 1000;
+}
+
+header.scrolled {
+  background: #0f1218;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+nav a {
+  margin-left: 22px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #ff3b3b;
+  transition: 0.3s;
+}
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero p {
+  max-width: 620px;
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+section {
+  padding: 110px 80px;
+}
+
+.section-label {
+  color: #ff3b3b;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 36px;
+  margin: 10px 0 50px;
+}
+
+.features {
+  background: #151922;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  color: #111;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-img img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: 0.6s;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 25px;
+}
+
+.card-content h3 {
+  margin-bottom: 12px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #555;
+}
+
+.news {
+  background: #fff;
+  color: #111;
+}
+
+.news-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
+
+.news-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.news-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.date {
+  display: inline-block;
+  margin-top: -18px;
+  background: #ff3b3b;
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.news-card h3 {
+  margin: 20px 0 8px;
+}
+
+.author {
+  font-size: 12px;
+  color: #777;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 26px;
+  border: 2px solid #111;
+  font-size: 12px;
+  text-decoration: none;
+  color: #111;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media(max-width: 768px){
+  header { padding: 18px 30px; }
+  h2 { font-size: 28px; }
+  .hero h1 { font-size: 36px; }
+}
+</style>
+</head>
+
+<body>
+
+<header id="navbar">
+  <div class="logo">Musyawarah Crew</div>
+<nav>
+    <a href="index.html" >Beranda</a>
+    <a href="Artikel.html" >Jurnal</a>
+    <a href="#" class="active">Berita</a>
+    <a href="Infografis.html">Infografis</a>
+    <a href="https://ngl.link/kelompok424572" target="_blank" rel="noopener noreferrer">QNA</a>
+    <a href="https://discord.com/invite/ChqRe6mbc" target="_blank" rel="noopener noreferrer">Forum</a>
+    <a href="Anggota.html">About Us</a>
+  </nav>
+</header>
+
+
+   
+
+<section class="news" id="news">
+  <span class="section-label">BERITA TERKAIT SILA KE-4</span>
+  <h2>BERITA </h2>
+
+  <div class="grid">
+    <div class="news-card reveal">
+      <img src="https://static.dw.com/image/75554238_1004.jpg">
+      <span class="date">Januari 19, 2026</span>
+      <h3>Isu Greenland Memanas, UE Rapat Darurat Hadapi Tarif Trump</h3>
+      <p class="author">Sumber: DW.com</p>
+      <a href="https://www.dw.com/id/isu-grinlandia-memanas-ue-rapat-darurat-hadapi-tarif-trump/a-75561486" target="_blank" class="btn">Baca Berita</a>
+    </div>
+    
+    <div class="news-card reveal">
+      <img src="https://humas.polri.go.id/api/article-files/viewer/WhatsAppImage2026-01-07at13.15.55(1)_69357.jpeg">
+      <span class="date">Januari 7, 2026</span>
+      <h3>Polsek Sukadana Sambang dan Monitoring Rapat Minggon Desa, Wujud Peran Polri Jaga Kamtibmas dan Sinergi Pemerintahan Desa</h3>
+      <p class="author">Sumber: Humas Polri</p>
+      <a href="https://humas.polri.go.id/news/detail/2236095-polsek-sukadana-sambang-dan-monitoring-rapat-minggon-desa-wujud-peran-polri-jaga-kamtibmas-dan-sinergi-pemerintahan-desa" target="_blank" class="btn">Baca Berita</a>
+    </div>
+    <div class="news-card reveal">
+      <img src="https://img.antaranews.com/cache/1200x800/2025/03/20/1000306914.jpg.webp">
+      <span class="date">Desember 13, 2025</span>
+      <h3>PDIP tetap ingin kepala daerah langsung dipilih rakyat</h3>
+      <p class="author">Sumber: Antara News</p>
+      <a href="https://m.antaranews.com/berita/5303068/pdip-" target="_blank" class="btn">Baca Berita</a>
+    </div>
+    <div class="news-card reveal">
+      <img src="https://img.antaranews.com/cache/1200x800/2023/06/07/PEMILU_PALU_HAKIM.jpg.webp">
+      <span class="date">Juni 7, 2023</span>
+      <h3>Sistem pemilu penentu jumlah kursi di parlemen</h3>
+      <p class="author">Sumber: Antara News</p>
+      <a href="https://m.antaranews.com/berita/3576828/sistem-pemilu-penentu-jumlah-kursi-di-parlemen?utm_source=antaranews&utm_medium=mobile&utm_campaign=latest_category" target="_blank" class="btn">Baca Berita</a>
+    </div>
+   
+  
+  </div>
+</section>
+
+
+
+
+<script>
+const navbar = document.getElementById("navbar");
+window.addEventListener("scroll", () => {
+  navbar.classList.toggle("scrolled", window.scrollY > 60);
+});
+
+const reveals = document.querySelectorAll(".reveal");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+},{ threshold: 0.15 });
+
+reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
