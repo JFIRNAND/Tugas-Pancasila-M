@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Musyawarah Zone</title>
+<title>Musyawarah Crew</title>
 
 <style>
 
@@ -41,7 +41,7 @@ header.scrolled {
 
 .logo {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 25px;
   letter-spacing: 1px;
 }
 
@@ -49,7 +49,7 @@ nav a {
   margin-left: 22px;
   color: #fff;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 20px;
   position: relative;
 }
 
@@ -64,7 +64,8 @@ nav a::after {
   transition: 0.3s;
 }
 
-nav a:hover::after {
+nav a:hover::after,
+nav a.active::after {
   width: 100%;
 }
 
@@ -253,9 +254,8 @@ h2 {
   <div class="logo">Musyawarah Crew</div>
 <nav>
     <a href="index.html" class="active">Beranda</a>
-    <a href="index.html#features">Fitur</a>
     <a href="Artikel.html" >Jurnal</a>
-    <a href="index.html#news">Berita</a>
+    <a href="Berita.html">Berita</a>
     <a href="Infografis.html">Infografis</a>
     <a href="https://ngl.link/kelompok424572" target="_blank" rel="noopener noreferrer">QNA</a>
     <a href="https://discord.com/invite/ChqRe6mbc" target="_blank" rel="noopener noreferrer">Forum</a>
@@ -287,13 +287,13 @@ h2 {
             </a>
         <div class="card-content">
           <h3>Artikel Nilai Sila ke-4</h3>
-          <p>Pembahasan mendalam tentang nilai demokrasi dan partisipasi rakyat.</p>
+          <p>Pembahasan tentang nilai demokrasi dan partisipasi rakyat.</p>
         </div>
       </div>
     </div>
 
     <div class="card reveal">
-      <a href="#news">
+      <a href="Berita.html">
         <div class="card-img">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqKb3W5ktW3xfiiQ5Lenk23qQUzTk7Fj75Nw&s.jpg">
         </div>
@@ -318,46 +318,6 @@ h2 {
   </div>
   
 </section>
-
-<section class="news" id="news">
-  <span class="section-label">BERITA & ARTIKEL TERKAIT</span>
-  <h2>Berita / Artikel Sila ke-4</h2>
-
-  <div class="grid">
-    <div class="news-card reveal">
-      <img src="https://static.dw.com/image/75554238_1004.jpg">
-      <span class="date">Januari 19, 2026</span>
-      <h3>Isu Greenland Memanas, UE Rapat Darurat Hadapi Tarif Trump</h3>
-      <p class="author">Sumber: DW.com</p>
-      <a href="https://www.dw.com/id/isu-grinlandia-memanas-ue-rapat-darurat-hadapi-tarif-trump/a-75561486" target="_blank" class="btn">Baca Berita</a>
-    </div>
-    
-    <div class="news-card reveal">
-      <img src="https://humas.polri.go.id/api/article-files/viewer/WhatsAppImage2026-01-07at13.15.55(1)_69357.jpeg">
-      <span class="date">Januari 7, 2026</span>
-      <h3>Polsek Sukadana Sambang dan Monitoring Rapat Minggon Desa, Wujud Peran Polri Jaga Kamtibmas dan Sinergi Pemerintahan Desa</h3>
-      <p class="author">Sumber: Humas Polri</p>
-      <a href="https://humas.polri.go.id/news/detail/2236095-polsek-sukadana-sambang-dan-monitoring-rapat-minggon-desa-wujud-peran-polri-jaga-kamtibmas-dan-sinergi-pemerintahan-desa" target="_blank" class="btn">Baca Berita</a>
-    </div>
-    <div class="news-card reveal">
-      <img src="https://img.antaranews.com/cache/1200x800/2025/03/20/1000306914.jpg.webp">
-      <span class="date">Desember 13, 2025</span>
-      <h3>PDIP tetap ingin kepala daerah langsung dipilih rakyat</h3>
-      <p class="author">Sumber: Antara News</p>
-      <a href="https://m.antaranews.com/berita/5303068/pdip-" target="_blank" class="btn">Baca Berita</a>
-    </div>
-    <div class="news-card reveal">
-      <img src="https://img.antaranews.com/cache/1200x800/2023/06/07/PEMILU_PALU_HAKIM.jpg.webp">
-      <span class="date">Juni 7, 2023</span>
-      <h3>Sistem pemilu penentu jumlah kursi di parlemen</h3>
-      <p class="author">Sumber: Antara News</p>
-      <a href="https://m.antaranews.com/berita/3576828/sistem-pemilu-penentu-jumlah-kursi-di-parlemen?utm_source=antaranews&utm_medium=mobile&utm_campaign=latest_category" target="_blank" class="btn">Baca Berita</a>
-    </div>
-   
-  
-  </div>
-</section>
-
 
 
 
