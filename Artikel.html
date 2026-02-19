@@ -6,7 +6,6 @@
 <title>Artikel – Sila ke-4 Pancasila</title>
 
 <style>
-/* ================= RESET ================= */
 *{
   margin:0;
   padding:0;
@@ -20,7 +19,6 @@ body{
   overflow-x:hidden;
 }
 
-/* ================= NAVBAR (SAMA DENGAN HOME) ================= */
 header{
   position:fixed;
   width:100%;
@@ -69,7 +67,6 @@ nav a.active::after{
   width:100%;
 }
 
-/* ================= SECTION ================= */
 section{
   padding:140px 80px 120px;
 }
@@ -86,7 +83,6 @@ h1{
   margin-bottom:70px;
 }
 
-/* ================= GRID ARTIKEL ================= */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -142,7 +138,6 @@ h1{
   color:#fff;
 }
 
-/* ================= ARTIKEL PANJANG ================= */
 .full-article{
   max-width:900px;
   margin-bottom:80px;
@@ -159,7 +154,6 @@ h1{
   color:#ddd;
 }
 
-/* ================= RESPONSIVE ================= */
 @media(max-width:768px){
   header{padding:18px 30px}
   section{padding:130px 30px}
@@ -170,7 +164,6 @@ h1{
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
 <header id="navbar">
   <div class="logo">Kelompok 4 Pancasila M</div>
   <nav>
@@ -196,7 +189,6 @@ h1{
     berbangsa, bernegara, dan bermasyarakat.
   </p>
 
-  <!-- ================= PREVIEW ARTIKEL ================= -->
   <div class="grid">
     <div class="card">
       <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620">
@@ -226,7 +218,6 @@ h1{
     </div>
   </div>
 
-  <!-- ================= ARTIKEL LENGKAP ================= -->
 
   <div class="full-article" id="artikel1">
   <h2>Makna Filosofis Sila ke-4 Pancasila</h2>
@@ -435,7 +426,6 @@ h1{
 
 </section>
 
-<!-- ================= SCRIPT NAVBAR ================= -->
 <script>
 const navbar = document.getElementById("navbar");
 window.addEventListener("scroll", () => {
