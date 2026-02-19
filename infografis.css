@@ -6,7 +6,9 @@
 }
 
 body {
-  background: #0f1218;
+  background: radial-gradient(circle at 20% 30%, rgba(255,0,0,.08), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255,0,0,.06), transparent 40%),
+    #020617;
   color: #fff;
   overflow-x: hidden;
 }
@@ -65,16 +67,21 @@ nav a:hover::after {
 
 h1{
   font-size:40px;
+  animation: Slide 0.5s ease-out;
 }
 
-/* GRID */
+.paragraf{
+  animation: Slide_bawah 0.7s ease-out 0.5s backwards;
+  
+}
+
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:30px;
 }
 
-/* CARD */
+
 .info-card h3{
   z-index: 1;
 }
@@ -94,7 +101,12 @@ h1{
   align-items:center;
   justify-content:space-between;
   margin-top: 135px;
+  animation: FadeinCard 1s ease-out 0.8s backwards;
 }
+
+.info-card:nth-child(1){ animation-delay: .2s; }
+.info-card:nth-child(2){ animation-delay: .4s; }
+.info-card:nth-child(3){ animation-delay: .6s; }
 
 .info-card::before{
   content:"";
@@ -153,4 +165,36 @@ h1{
   right:40px;
   font-size:40px;
   cursor:pointer;
+}
+
+@keyframes Slide {
+  from {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes Slide_bawah {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes FadeinCard {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
