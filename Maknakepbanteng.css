@@ -257,7 +257,7 @@ nav a.active::after {
 
 .btn-wrapper{
   display: flex;
-  justify-content: center; /* bikin ke tengah */
+  justify-content: center; 
   margin: 80px 0;
 }
 
