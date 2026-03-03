@@ -124,7 +124,7 @@ nav a.active::after {
 }
 
 .content h2{
-  text-align: justify;
+  text-align: center;
   font-size: 28px;
   margin-bottom: 10px;
   color:#e8d7b6;
@@ -132,7 +132,7 @@ nav a.active::after {
 
 .block1{
   padding:40px;
-  text-align: justify;
+  text-align: center;
   max-width: 35%;
   margin-left: 5%;
   z-index: 2;
@@ -142,7 +142,7 @@ nav a.active::after {
 
 .block2{
   padding:40px;
-  text-align: justify;
+  text-align: center;
   max-width: 35%;
   margin-left: 60%;
   margin-top: -10%;
@@ -153,7 +153,7 @@ nav a.active::after {
 
 .block3{
   padding:40px;
-  text-align: justify;
+  text-align: center;
   max-width: 35%;
   margin-left: 5%;
   margin-top: -10%;
@@ -164,7 +164,7 @@ nav a.active::after {
 
 .block4{
   padding:40px;
-  text-align: justify;
+  text-align: center;
   max-width: 35%;
   margin-left: 60%;
   margin-top: -10%;
