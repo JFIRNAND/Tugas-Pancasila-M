@@ -8,7 +8,6 @@
 body{
   background:#000;
   color:white;
-  overflow: hidden;
   background-image: url("img/GambarGaruda.png");
   background-repeat: repeat-y;
   background-position: center top;
@@ -186,6 +185,7 @@ nav a.active::after {
   border: 2px solid #e63946;
   border-radius: 12px;
   background: rgba(255,255,255,0.05);
+  margin-right: 5%;
 }
 
 .illust1 img {
@@ -207,6 +207,7 @@ nav a.active::after {
   border: 2px solid #e63946;
   border-radius: 12px;
   background: rgba(255,255,255,0.05);
+  margin-right: 5%;
 }
 
 .illust2 img {
@@ -228,6 +229,7 @@ nav a.active::after {
   border: 2px solid #e63946;
   border-radius: 12px;
   background: rgba(255,255,255,0.05);
+  margin-right: 5%;
 }
 
 .illust3 img {
@@ -249,6 +251,7 @@ nav a.active::after {
   border: 2px solid #e63946;
   border-radius: 12px;
   background: rgba(255,255,255,0.05);
+  margin-right: 5%;
 }
 
 .illust4 img {
