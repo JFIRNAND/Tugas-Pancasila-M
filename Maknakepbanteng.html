@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Makna Kepala Banteng</title>
-    <link rel="stylesheet" href="Maknakepbanteng.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Makna Kepala Banteng</title>
+<link rel="stylesheet" href="Infografisbanteng.css">
 </head>
+
 <body>
 
-<header id="navbar">
+<header>
   <div class="logo">Musyawarah Crew</div>
   <nav>
-   <a href="index.html" >Beranda</a>
+    <a href="index.html">Beranda</a>
     <a href="Artikel.html" >Artikel</a>
     <a href="Berita.html">Berita</a>
     <a href="Maknakepbanteng.html" class="active">Infografis</a>
@@ -19,95 +20,97 @@
     <a href="https://discord.com/invite/ChqRe6mbc" target="_blank" rel="noopener noreferrer">Forum</a>
     <a href="Anggota.html">About Us</a>
   </nav>
-  </nav>
 </header>
 
-  <section class="hero">
-    <div class="hero-overlay">
-      <h1>MAKNA KEPALA BANTENG</h1>
-      <p class="quote">
-        "KERAKYATAN YANG DIPIMPIN OLEH HIKMAT KEBIJAKSANAAN
-        DALAM PERMUSYAWARATAN/PERWAKILAN."
-      </p>
-    </div>
-  </section>
-
-  <div class="icon-wrapper reveal">
-    <div class="icon-circle">
-      <img src="img\GambarBanteng.png" alt="banteng">
-    </div>
+<section class="hero">
+  <div>
+    <h1>MAKNA KEPALA BANTENG</h1>
+    <p>"Kerakyatan yang dipimpin oleh hikmat kebijaksanaan dalam permusyawaratan/perwakilan."</p>
   </div>
+</section>
 
-  <section class="content">
+<div class="icon-wrapper reveal">
+  <div class="icon-circle">
+    <img src="img/GambarBanteng.png" alt="banteng">
+  </div>
+</div>
 
-    <div class="block1 reveal">
-      <h2>Makna Kepala Banteng</h2>
+
+<section class="section">
+
+  <h2 class="reveal">Makna Simbol Sila Ke-4</h2>
+
+  <div class="grid reveal">
+    <div class="card">
+      <h3>Banteng Sebagai Simbol Kebersamaan</h3>
       <p>
         Banteng dipilih menjadi simbol Sila ke-4 Pancasila karena sifatnya yang
         berkelompok dan kuat, mencerminkan semangat gotong royong, kekuatan kolektif,
         dan keberanian dalam mengambil keputusan untuk kepentingan bersama.
       </p>
-      <div class="illust1 reveal">
-        <img src="img\o9b5qgakwplkglo.jpeg" alt="illust1">
-      </div>
     </div>
+    <div class="image-box">
+      <img src="img/o9b5qgakwplkglo.jpeg">
+    </div>
+  </div>
 
-    <div class="block2 reveal">
-      <h2>Banteng Sebagai Hewan Sosial</h2>
+  <div class="grid reveal">
+    <div class="image-box">
+      <img src="img/37e725efe26e0487bc83287a1c350936.jpg">
+    </div>
+    <div class="card">
+      <h3>Kekuatan dan Keberanian</h3>
       <p>
-        Sama seperti banteng yang hidup berkelompok, masyarakat Indonesia diharapkan
-        mengutamakan musyawarah untuk mencapai mufakat dalam memecahkan masalah.
+        Banteng melambangkan kekuatan, ketegasan, dan keberanian dalam
+        menyampaikan pendapat dengan cara yang bijaksana dan bertanggung jawab.
       </p>
-      <div class="illust2 reveal">
-        <img src="img\37e725efe26e0487bc83287a1c350936.jpg" alt="illust2">
-      </div>
     </div>
+  </div>
 
-    <div class="block3 reveal">
-      <h2>Kekuatan dan Keberanian</h2>
+  <div class="grid reveal">
+    <div class="card">
+      <h3>Demokrasi dan Perwakilan</h3>
       <p>
-        Banteng melambangkan kekuatan dan sifat pantang menyerah. Warna merah pada
-        latar belakang melambangkan keberanian dalam bertindak dan menyampaikan
-        pendapat secara jujur.
+        Sila ke-4 menekankan bahwa keputusan harus diambil melalui
+        permusyawaratan dan perwakilan, bukan pemaksaan kehendak.
       </p>
-      <div class="illust3 reveal">
-        <img src="img\Depositphotos_39329973_S-770x400.jpg" alt="illust3">
-      </div>
     </div>
-
-    <div class="block4 reveal">
-      <h2>Demokrasi dan Kekeluargaan</h2>
-      <p>
-        Kepala banteng melambangkan kedaulatan rakyat, di mana setiap keputusan
-        diambil dengan bijaksana melalui perwakilan dan tidak memaksakan kehendak.
-      </p>
-      <div class="illust4 reveal">
-        <img src="img\1759677426_79daf460af529b241c48.jpg" alt="illust4">
-      </div>
+    <div class="image-box">
+      <img src="img\1759677426_79daf460af529b241c48.jpg">
     </div>
-  </section>
+  </div>
 
-  <div class="btn-wrapper">
+  <div class="quote-box reveal">
+    “Permusyawaratan adalah jiwa bangsa Indonesia.”
+    <span>— Soekarno</span>
+  </div>
+
+</section>
+
+<div class="btn-wrapper">
   <a href="Infografis.html" class="btn-infografis">
     Infografis Lainnya
   </a>
 </div>
 
-</body>
+
+<footer>
+  © 2026 Musyawarah Crew | Projek Pancasila
+</footer>
 
 <script>
 const reveals = document.querySelectorAll(".reveal");
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
       entry.target.classList.add("show");
     }
   });
-}, { threshold: 0.2 });
+},{threshold:0.2});
 
-reveals.forEach(el => observer.observe(el));
-
+reveals.forEach(el=>observer.observe(el));
 </script>
 
+</body>
 </html>
