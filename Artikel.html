@@ -6,168 +6,207 @@
 <title>Artikel – Sila ke-4 Pancasila</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:"Segoe UI", Arial, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-body{
-  background:#0f1218;
-  color:#fff;
-  overflow-x:hidden;
+body {
+  background: #0f1218;
+  color: #fff;
+  overflow-x: hidden;
+  scroll-behavior: smooth; /* Tambahan agar scroll ke artikel lebih halus */
 }
 
-header{
-  position:fixed;
-  width:100%;
-  top:0;
-  padding:18px 70px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background:rgba(15,18,24,0.85);
-  transition:.4s;
-  z-index:1000;
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 18px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(15, 18, 24, 0.85);
+  transition: .4s;
+  z-index: 1000;
+  backdrop-filter: blur(10px); /* Tambahan estetika blur pada navbar */
 }
 
-header.scrolled{
-  background:#0f1218;
-  box-shadow:0 4px 20px rgba(0,0,0,.4);
+header.scrolled {
+  background: #0f1218;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .4);
 }
 
-.logo{
-  font-weight:700;
-  font-size:25px;
-  letter-spacing:1px;
+.logo {
+  font-weight: 700;
+  font-size: 25px;
+  letter-spacing: 1px;
 }
 
-nav a{
-  margin-left:22px;
-  color:#fff;
-  text-decoration:none;
-  font-size:20px;
-  position:relative;
+nav a {
+  margin-left: 22px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px; /* Disesuaikan sedikit agar lebih rapi */
+  position: relative;
 }
 
-nav a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-6px;
-  width:0;
-  height:2px;
-  background:#ff3b3b;
-  transition:.3s;
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #ff3b3b;
+  transition: .3s;
 }
 
 nav a:hover::after,
-nav a.active::after{
-  width:100%;
+nav a.active::after {
+  width: 100%;
 }
 
-section{
-  padding:140px 80px 120px;
+section {
+  padding: 140px 80px 120px;
 }
 
-h1{
-  font-size:42px;
-  margin-bottom:20px;
+h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
 }
 
-.subtitle{
-  max-width:760px;
-  line-height:1.8;
-  color:#ccc;
-  margin-bottom:70px;
+.subtitle {
+  max-width: 760px;
+  line-height: 1.8;
+  color: #ccc;
+  margin-bottom: 70px;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:30px;
-  margin-bottom:100px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 100px;
 }
 
-.card{
-  background:#fff;
-  color:#111;
-  overflow:hidden;
-  transition:.4s;
+.card {
+  background: #fff;
+  color: #111;
+  overflow: hidden;
+  transition: .4s;
+  border-radius: 8px; /* Tambahan border-radius agar lebih modern */
 }
 
-.card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 20px 40px rgba(0,0,0,.25);
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .25);
 }
 
-.card img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
 }
 
-.card-content{
-  padding:25px;
+.card-content {
+  padding: 25px;
 }
 
-.card-content h3{
-  margin-bottom:12px;
+.card-content h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
 }
 
-.card-content p{
-  font-size:14px;
-  line-height:1.7;
-  color:#444;
+.card-content p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #444;
 }
 
-.read{
-  display:inline-block;
-  margin-top:16px;
-  font-size:12px;
-  border:2px solid #111;
-  padding:6px 18px;
-  text-decoration:none;
-  color:#111;
-  transition:.3s;
+.read {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 13px;
+  border: 2px solid #111;
+  padding: 8px 20px;
+  text-decoration: none;
+  color: #111;
+  transition: .3s;
+  font-weight: 600;
 }
 
-.read:hover{
-  background:#111;
-  color:#fff;
+.read:hover {
+  background: #111;
+  color: #fff;
 }
 
-.full-article{
-  max-width:900px;
-  margin-bottom:80px;
+.full-article {
+  max-width: 900px;
+  margin: 0 auto 100px; /* Diubah agar posisinya ke tengah */
+  background: #1a1e29; /* Background kontras untuk pembungkus artikel */
+  padding: 40px;
+  border-radius: 12px;
 }
 
-.full-article h2{
-  font-size:32px;
-  margin-bottom:20px;
+.full-article h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: center;
 }
 
-.full-article p{
-  line-height:1.9;
-  margin-bottom:18px;
-  color:#ddd;
+/* CSS BARU UNTUK BATASAN OUTLINE / SUB-JUDUL */
+.full-article h3 {
+  font-size: 22px;
+  color: #ff3b3b;
+  margin: 40px 0 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
 }
 
-footer{
-  text-align:center;
-  padding:30px;
-  background:#0b0d12;
-  border-top:1px solid rgba(255,255,255,0.1);
-  font-size:14px;
-  color:#aaa;
+.full-article p {
+  line-height: 1.9;
+  margin-bottom: 18px;
+  color: #ddd;
+  font-size: 16px;
 }
 
+/* CSS BARU UNTUK KOTAK SUMBER REFERENSI */
+.reference {
+  margin-top: 50px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 4px solid #ff3b3b;
+  border-radius: 0 8px 8px 0;
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.7;
+}
 
-@media(max-width:768px){
-  header{padding:18px 30px}
-  section{padding:130px 30px}
-  h1{font-size:32px}
+.reference strong {
+  color: #fff;
+  font-size: 15px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #0b0d12;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  color: #aaa;
+}
+
+@media(max-width: 768px) {
+  header { padding: 18px 30px; }
+  section { padding: 130px 30px; }
+  h1 { font-size: 32px; }
+  .full-article { padding: 25px; }
 }
 </style>
 </head>
@@ -177,8 +216,8 @@ footer{
 <header id="navbar">
   <div class="logo">Musyawarah Crew</div>
   <nav>
-<a href="index.html" >Beranda</a>
-    <a href="#" class="active" >Artikel</a>
+    <a href="index.html">Beranda</a>
+    <a href="#" class="active">Artikel</a>
     <a href="Berita.html">Berita</a>
     <a href="Maknakepbanteng.html">Infografis</a>
     <a href="https://ngl.link/kelompok424572" target="_blank" rel="noopener noreferrer">QNA</a>
@@ -188,19 +227,16 @@ footer{
 </header>
 
 <section>
-
   <h1>Artikel Sila ke-4 Pancasila</h1>
   <p class="subtitle" align="justify">
     Kumpulan artikel analitis mengenai
-    <b>“Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan
-    dalam Permusyawaratan/Perwakilan”</b>
-    sebagai landasan demokrasi Pancasila dalam kehidupan
-    berbangsa, bernegara, dan bermasyarakat.
+    <b>“Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan”</b>
+    sebagai landasan demokrasi Pancasila dalam kehidupan berbangsa, bernegara, dan bermasyarakat.
   </p>
 
   <div class="grid">
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620">
+      <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620" alt="Filosofi Demokrasi">
       <div class="card-content">
         <h3>Makna Filosofis Sila ke-4</h3>
         <p>Pemaknaan mendalam sila ke-4 sebagai konsep kedaulatan rakyat yang beretika.</p>
@@ -209,18 +245,18 @@ footer{
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df">
+      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df" alt="Sistem Demokrasi">
       <div class="card-content">
-        <h3>Sila ke-4 dalam Sistem Demokrasi Indonesia</h3>
+        <h3>Sistem Demokrasi Indonesia</h3>
         <p>Analisis peran sila ke-4 dalam sistem demokrasi konstitusional Indonesia.</p>
         <a href="#artikel2" class="read">Baca Selengkapnya</a>
       </div>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
+      <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Implementasi Sosial">
       <div class="card-content">
-        <h3>Implementasi Musyawarah dalam Kehidupan Sosial</h3>
+        <h3>Implementasi dalam Kehidupan</h3>
         <p>Penerapan nilai musyawarah dalam keluarga, pendidikan, dan masyarakat.</p>
         <a href="#artikel3" class="read">Baca Selengkapnya</a>
       </div>
@@ -229,216 +265,159 @@ footer{
 
 
   <div class="full-article" id="artikel1">
-  <h2>Makna Filosofis Sila ke-4 Pancasila</h2>
+    <h2>Makna Filosofis Sila ke-4 Pancasila</h2>
 
-  <p align="justify">
-    Sila ke-4 Pancasila, yaitu
-    <i>“Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan
-    dalam Permusyawaratan/Perwakilan”</i>,
-    mengandung makna filosofis yang mendalam mengenai konsep
-    kedaulatan rakyat dalam konteks kehidupan berbangsa dan bernegara.
-    Sila ini menegaskan bahwa kekuasaan tertinggi berada di tangan
-    rakyat, namun pelaksanaannya harus dijalankan secara bijaksana,
-    terarah, dan bertanggung jawab.
-  </p>
+    <h3>1. Kedaulatan Rakyat dan Penolakan Demokrasi Absolut</h3>
+    <p align="justify">
+      Sila ke-4 Pancasila, yaitu <i>“Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan”</i>, 
+      mengandung makna filosofis yang mendalam mengenai konsep kedaulatan rakyat dalam konteks kehidupan berbangsa dan bernegara. 
+      Sila ini menegaskan bahwa kekuasaan tertinggi berada di tangan rakyat, namun pelaksanaannya harus dijalankan secara bijaksana, 
+      terarah, dan bertanggung jawab.
+    </p>
+    <p align="justify">
+      Secara filosofis, sila ke-4 menolak bentuk demokrasi yang bersifat absolut dan individualistik. Demokrasi dalam perspektif 
+      Pancasila tidak didasarkan semata-mata pada mekanisme suara terbanyak, melainkan pada proses musyawarah yang mengedepankan 
+      akal sehat, pertimbangan moral, dan nilai kemanusiaan. Dengan demikian, keputusan yang dihasilkan diharapkan mencerminkan 
+      keadilan substantif, bukan sekadar kemenangan kelompok tertentu.
+    </p>
 
-  <p align="justify">
-    Secara filosofis, sila ke-4 menolak bentuk demokrasi yang bersifat
-    absolut dan individualistik. Demokrasi dalam perspektif Pancasila
-    tidak didasarkan semata-mata pada mekanisme suara terbanyak,
-    melainkan pada proses musyawarah yang mengedepankan akal sehat,
-    pertimbangan moral, dan nilai kemanusiaan. Dengan demikian,
-    keputusan yang dihasilkan diharapkan mencerminkan keadilan
-    substantif, bukan sekadar kemenangan kelompok tertentu.
-  </p>
+    <h3>2. Mengurai Makna "Hikmat", "Permusyawaratan", dan "Perwakilan"</h3>
+    <p align="justify">
+      Konsep <b>hikmat kebijaksanaan</b> dalam sila ke-4 menunjukkan bahwa setiap keputusan publik harus lahir dari proses 
+      pemikiran yang matang, rasional, dan berorientasi pada kepentingan bersama. Hikmat tidak hanya berarti kecerdasan intelektual, 
+      tetapi juga mencakup kebijaksanaan moral, empati sosial, serta tanggung jawab etis terhadap dampak keputusan yang diambil.
+    </p>
+    <p align="justify">
+      Sementara itu, prinsip <b>permusyawaratan</b> mencerminkan nilai dialog dan keterbukaan dalam pengambilan keputusan. 
+      Musyawarah menempatkan setiap individu pada posisi yang setara untuk menyampaikan pendapat, mendengarkan pandangan orang lain, 
+      serta mencari titik temu demi tercapainya kesepakatan bersama. Nilai ini memperkuat semangat persatuan dan menghindari dominasi.
+    </p>
+    <p align="justify">
+      Aspek <b>perwakilan</b> memiliki makna filosofis bahwa tidak seluruh rakyat dapat terlibat langsung dalam setiap proses 
+      pengambilan keputusan negara. Oleh karena itu, rakyat memberikan mandat kepada wakil-wakilnya melalui mekanisme yang sah 
+      dan konstitusional. Para wakil rakyat tersebut berkewajiban menjalankan amanah dengan penuh integritas moral.
+    </p>
 
-  <p align="justify">
-    Konsep <b>hikmat kebijaksanaan</b> dalam sila ke-4 menunjukkan bahwa
-    setiap keputusan publik harus lahir dari proses pemikiran yang
-    matang, rasional, dan berorientasi pada kepentingan bersama.
-    Hikmat tidak hanya berarti kecerdasan intelektual, tetapi juga
-    mencakup kebijaksanaan moral, empati sosial, serta tanggung jawab
-    etis terhadap dampak keputusan yang diambil.
-  </p>
+    <h3>3. Penutup: Sistem Nilai Bukan Sekadar Prosedur</h3>
+    <p align="justify">
+      Dengan demikian, sila ke-4 Pancasila mengajarkan bahwa demokrasi bukan sekadar prosedur politik, melainkan suatu sistem nilai 
+      yang menuntut kedewasaan berpikir, kebijaksanaan bertindak, serta komitmen terhadap keadilan sosial. Nilai filosofis ini menjadi 
+      fondasi penting dalam membangun kehidupan demokratis yang beradab dan beretika.
+    </p>
 
-  <p align="justify">
-    Sementara itu, prinsip <b>permusyawaratan</b> mencerminkan nilai
-    dialog dan keterbukaan dalam pengambilan keputusan. Musyawarah
-    menempatkan setiap individu pada posisi yang setara untuk
-    menyampaikan pendapat, mendengarkan pandangan orang lain, serta
-    mencari titik temu demi tercapainya kesepakatan bersama.
-    Nilai ini memperkuat semangat persatuan dan menghindari dominasi
-    kekuasaan oleh segelintir pihak.
-  </p>
-
-  <p align="justify">
-    Aspek <b>perwakilan</b> dalam sila ke-4 memiliki makna filosofis
-    bahwa tidak seluruh rakyat dapat terlibat langsung dalam setiap
-    proses pengambilan keputusan negara. Oleh karena itu, rakyat
-    memberikan mandat kepada wakil-wakilnya melalui mekanisme yang sah
-    dan konstitusional. Para wakil rakyat tersebut berkewajiban
-    menjalankan amanah dengan penuh tanggung jawab, kejujuran, dan
-    integritas moral.
-  </p>
-
-  <p align="justify">
-    Dengan demikian, sila ke-4 Pancasila mengajarkan bahwa demokrasi
-    bukan sekadar prosedur politik, melainkan suatu sistem nilai yang
-    menuntut kedewasaan berpikir, kebijaksanaan bertindak, serta
-    komitmen terhadap keadilan sosial. Nilai filosofis ini menjadi
-    fondasi penting dalam membangun kehidupan demokratis yang
-    beradab, beretika, dan berorientasi pada kesejahteraan bersama.
-  </p>
-</div>
+    <div class="reference">
+      <strong>Sumber Referensi:</strong>
+      <ul>
+        <li>Kaelan, M.S. (2013). <i>Pendidikan Pancasila</i>. Yogyakarta: Paradigma.</li>
+        <li>Badan Pembinaan Ideologi Pancasila (BPIP). (2021). <i>Materi Dasar Pembinaan Ideologi Pancasila</i>. Jakarta.</li>
+      </ul>
+    </div>
+  </div>
 
 
   <div class="full-article" id="artikel2">
-  <h2>Sila ke-4 dalam Sistem Demokrasi Indonesia</h2>
+    <h2>Sila ke-4 dalam Sistem Demokrasi Indonesia</h2>
 
-  <p align="justify">
-    Sistem demokrasi Indonesia secara fundamental berlandaskan pada
-    nilai-nilai Pancasila, khususnya sila ke-4 yang menegaskan prinsip
-    <i>“Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam
-    Permusyawaratan/Perwakilan”</i>. Prinsip ini menjadi ciri khas
-    demokrasi Indonesia yang membedakannya dari model demokrasi
-    liberal yang berkembang di negara-negara Barat.
-  </p>
+    <h3>1. Karakteristik Unik Demokrasi Pancasila</h3>
+    <p align="justify">
+      Sistem demokrasi Indonesia secara fundamental berlandaskan pada nilai-nilai Pancasila, khususnya sila ke-4. Prinsip ini menjadi ciri khas 
+      demokrasi Indonesia yang membedakannya dari model demokrasi liberal yang berkembang di negara-negara Barat.
+    </p>
+    <p align="justify">
+      Demokrasi Pancasila tidak menempatkan kebebasan individu sebagai nilai absolut, melainkan mengintegrasikan kebebasan tersebut 
+      dengan tanggung jawab moral dan kepentingan kolektif. Sila ke-4 berfungsi sebagai pedoman normatif agar pelaksanaan demokrasi 
+      tidak terjebak pada praktik politik yang transaksional, populis, atau semata-mata berbasis kekuatan mayoritas.
+    </p>
 
-  <p align="justify">
-    Demokrasi Pancasila tidak menempatkan kebebasan individu sebagai
-    nilai absolut, melainkan mengintegrasikan kebebasan tersebut
-    dengan tanggung jawab moral dan kepentingan kolektif. Dalam
-    konteks ini, sila ke-4 berfungsi sebagai pedoman normatif agar
-    pelaksanaan demokrasi tidak terjebak pada praktik politik yang
-    transaksional, populis, atau semata-mata berbasis kekuatan
-    mayoritas.
-  </p>
+    <h3>2. Praktik Ketatanegaraan dan Prinsip Musyawarah</h3>
+    <p align="justify">
+      Dalam praktik ketatanegaraan, sila ke-4 tercermin melalui sistem perwakilan rakyat yang dijalankan oleh lembaga-lembaga negara, 
+      seperti DPR, DPD, serta lembaga eksekutif. Para wakil rakyat memperoleh mandat langsung dari rakyat dan memiliki kewajiban moral 
+      serta konstitusional untuk memperjuangkan aspirasi masyarakat.
+    </p>
+    <p align="justify">
+      Prinsip <b>permusyawaratan</b> menuntut agar setiap proses pengambilan keputusan politik dilakukan melalui dialog, 
+      pertimbangan rasional, serta penghormatan terhadap perbedaan pendapat. Musyawarah dipahami sebagai mekanisme etis untuk 
+      mencapai keputusan yang mencerminkan kepentingan bersama dan menjaga persatuan bangsa.
+    </p>
 
-  <p align="justify">
-    Dalam praktik ketatanegaraan, sila ke-4 tercermin melalui sistem
-    perwakilan rakyat yang dijalankan oleh lembaga-lembaga negara,
-    seperti Dewan Perwakilan Rakyat (DPR), Dewan Perwakilan Daerah
-    (DPD), serta lembaga eksekutif yang dipilih melalui mekanisme
-    demokratis. Para wakil rakyat tersebut memperoleh mandat langsung
-    dari rakyat dan memiliki kewajiban moral serta konstitusional
-    untuk memperjuangkan aspirasi masyarakat secara adil dan
-    bertanggung jawab.
-  </p>
+    <h3>3. Landasan Etis dan Pencegahan Penyalahgunaan Kekuasaan</h3>
+    <p align="justify">
+      Konsep <b>hikmat kebijaksanaan</b> mengandung tuntutan agar para penyelenggara negara memiliki kedewasaan intelektual 
+      dan moral. Keputusan politik tidak boleh didasarkan pada tekanan kekuasaan atau kepentingan jangka pendek, melainkan pada 
+      pertimbangan kesejahteraan rakyat secara menyeluruh.
+    </p>
+    <p align="justify">
+      Dalam konteks modern, sila ke-4 juga berperan sebagai landasan etis untuk mencegah penyalahgunaan kekuasaan melalui 
+      pengawasan, akuntabilitas, serta transparansi. Demokrasi diarahkan untuk menciptakan keadilan sosial, menjaga persatuan nasional, 
+      serta mewujudkan kesejahteraan umum.
+    </p>
 
-  <p align="justify">
-    Prinsip <b>permusyawaratan</b> dalam sila ke-4 menuntut agar setiap
-    proses pengambilan keputusan politik dilakukan melalui dialog,
-    pertimbangan rasional, serta penghormatan terhadap perbedaan
-    pendapat. Musyawarah tidak hanya dipahami sebagai prosedur
-    formal, tetapi sebagai mekanisme etis untuk mencapai keputusan
-    yang mencerminkan kepentingan bersama dan menjaga persatuan
-    bangsa.
-  </p>
-
-  <p align="justify">
-    Selain itu, konsep <b>hikmat kebijaksanaan</b> mengandung tuntutan
-    agar para penyelenggara negara memiliki kedewasaan intelektual
-    dan moral. Keputusan politik yang diambil tidak boleh didasarkan
-    pada kepentingan kelompok, tekanan kekuasaan, atau kepentingan
-    jangka pendek, melainkan pada pertimbangan nilai keadilan,
-    kemanusiaan, dan kesejahteraan rakyat secara menyeluruh.
-  </p>
-
-  <p align="justify">
-    Dalam konteks kehidupan demokrasi modern, sila ke-4 juga berperan
-    sebagai landasan etis untuk mencegah penyalahgunaan kekuasaan.
-    Prinsip musyawarah dan perwakilan mengharuskan adanya mekanisme
-    pengawasan, akuntabilitas, serta transparansi dalam penyelenggaraan
-    pemerintahan. Dengan demikian, demokrasi tidak hanya berjalan
-    secara prosedural, tetapi juga substansial.
-  </p>
-
-  <p align="justify">
-    Secara keseluruhan, sila ke-4 Pancasila menempatkan demokrasi
-    sebagai sarana untuk mewujudkan tujuan negara, bukan sebagai
-    tujuan itu sendiri. Demokrasi Indonesia diarahkan untuk
-    menciptakan keadilan sosial, menjaga persatuan nasional, serta
-    mewujudkan kesejahteraan umum melalui proses pengambilan
-    keputusan yang bijaksana, partisipatif, dan berorientasi pada
-    kepentingan rakyat.
-  </p>
-</div>
+    <div class="reference">
+      <strong>Sumber Referensi:</strong>
+      <ul>
+        <li>Asshiddiqie, Jimly. (2006). <i>Pengantar Ilmu Hukum Tata Negara</i>. Jakarta: Sekretariat Jenderal dan Kepaniteraan MK RI.</li>
+        <li>Budiardjo, Miriam. (2008). <i>Dasar-Dasar Ilmu Politik</i>. Jakarta: Gramedia Pustaka Utama.</li>
+      </ul>
+    </div>
+  </div>
 
 
   <div class="full-article" id="artikel3">
-  <h2>Implementasi Musyawarah dalam Kehidupan Sosial</h2>
+    <h2>Implementasi Musyawarah dalam Kehidupan Sosial</h2>
 
-  <p align="justify">
-    Implementasi musyawarah sebagaimana diamanatkan dalam sila ke-4
-    Pancasila tidak hanya berlaku dalam lingkup ketatanegaraan,
-    melainkan juga memiliki peranan penting dalam kehidupan sosial
-    masyarakat. Musyawarah merupakan sarana utama untuk membangun
-    hubungan sosial yang harmonis, adil, dan berorientasi pada
-    kepentingan bersama.
-  </p>
+    <h3>1. Fondasi Awal: Keluarga dan Pendidikan</h3>
+    <p align="justify">
+      Implementasi musyawarah tidak hanya berlaku dalam lingkup ketatanegaraan, melainkan juga memiliki peranan penting dalam 
+      kehidupan sosial masyarakat. Musyawarah merupakan sarana utama untuk membangun hubungan sosial yang harmonis dan adil.
+    </p>
+    <p align="justify">
+      Dalam lingkungan keluarga, musyawarah menjadi fondasi awal pendidikan demokrasi. Proses pengambilan keputusan yang melibatkan 
+      seluruh anggota keluarga mencerminkan penghargaan terhadap pendapat setiap individu, menanamkan nilai keterbukaan, dan rasa 
+      tanggung jawab sejak usia dini.
+    </p>
+    <p align="justify">
+      Di lingkungan pendidikan, musyawarah berperan sebagai instrumen pembentukan karakter peserta didik. Melalui diskusi kelas 
+      dan organisasi siswa, peserta didik belajar menyampaikan pendapat secara santun, menerima perbedaan, dan mencapai kesepakatan kolektif.
+    </p>
 
-  <p align="justify">
-    Dalam lingkungan keluarga, musyawarah menjadi fondasi awal
-    pendidikan demokrasi. Proses pengambilan keputusan yang melibatkan
-    seluruh anggota keluarga, seperti penentuan aturan bersama atau
-    penyelesaian konflik, mencerminkan penghargaan terhadap pendapat
-    setiap individu. Praktik ini menanamkan nilai keterbukaan,
-    tanggung jawab, serta sikap saling menghormati sejak usia dini.
-  </p>
+    <h3>2. Dinamika Bermasyarakat dan Pembelajaran Sosial</h3>
+    <p align="justify">
+      Dalam kehidupan bermasyarakat, musyawarah menjadi mekanisme utama dalam pengambilan keputusan bersama, seperti perencanaan 
+      kegiatan lingkungan atau penyelesaian konflik sosial tingkat lokal. Musyawarah mendorong partisipasi aktif warga dan 
+      meminimalisasi potensi konflik.
+    </p>
+    <p align="justify">
+      Selain itu, musyawarah juga berperan sebagai sarana pembelajaran sosial yang menumbuhkan kesadaran akan pentingnya kepentingan 
+      bersama di atas kepentingan pribadi atau kelompok. Keputusan yang baik adalah keputusan yang mampu mengakomodasi berbagai 
+      kepentingan secara proporsional.
+    </p>
 
-  <p align="justify">
-    Di lingkungan pendidikan, musyawarah berperan sebagai instrumen
-    pembentukan karakter peserta didik. Diskusi kelas, rapat
-    organisasi siswa, serta forum musyawarah antara pendidik dan
-    peserta didik mencerminkan penerapan nilai demokrasi Pancasila
-    secara konkret. Melalui proses ini, peserta didik belajar
-    menyampaikan pendapat secara santun, menerima perbedaan, dan
-    mencapai kesepakatan secara kolektif.
-  </p>
+    <h3>3. Menghadapi Tantangan di Era Modern</h3>
+    <p align="justify">
+      Dalam konteks masyarakat modern yang plural dan dinamis, implementasi musyawarah menghadapi tantangan seperti sikap individualisme, 
+      polarisasi, serta pengaruh media sosial. Oleh karena itu, penguatan nilai musyawarah perlu dilakukan secara berkelanjutan 
+      melalui pendidikan karakter, keteladanan tokoh masyarakat, serta pembiasaan dialog yang konstruktif.
+    </p>
+    <p align="justify">
+      Secara keseluruhan, implementasi musyawarah dalam kehidupan sosial merupakan wujud nyata internalisasi sila ke-4 Pancasila. 
+      Nilai ini berfungsi sebagai perekat sosial yang menjaga persatuan dan menciptakan tatanan masyarakat yang beradab.
+    </p>
 
-  <p align="justify">
-    Dalam kehidupan bermasyarakat, musyawarah menjadi mekanisme utama
-    dalam pengambilan keputusan bersama, seperti perencanaan kegiatan
-    lingkungan, penyelesaian konflik sosial, dan penentuan kebijakan
-    tingkat lokal. Musyawarah mendorong partisipasi aktif warga,
-    memperkuat rasa kebersamaan, serta meminimalisasi potensi konflik
-    akibat perbedaan kepentingan.
-  </p>
-
-  <p align="justify">
-    Selain itu, musyawarah juga berperan sebagai sarana pembelajaran
-    sosial yang menumbuhkan kesadaran akan pentingnya kepentingan
-    bersama di atas kepentingan pribadi atau kelompok. Proses ini
-    mengajarkan bahwa keputusan yang baik adalah keputusan yang mampu
-    mengakomodasi berbagai kepentingan secara adil dan proporsional.
-  </p>
-
-  <p align="justify">
-    Dalam konteks masyarakat modern yang plural dan dinamis,
-    implementasi musyawarah menghadapi berbagai tantangan, seperti
-    sikap individualisme, perbedaan pandangan ideologis, serta
-    pengaruh media sosial. Oleh karena itu, penguatan nilai
-    musyawarah perlu dilakukan secara berkelanjutan melalui
-    pendidikan karakter, keteladanan tokoh masyarakat, serta
-    pembiasaan dialog yang konstruktif.
-  </p>
-
-  <p align="justify">
-    Secara keseluruhan, implementasi musyawarah dalam kehidupan sosial
-    merupakan wujud nyata internalisasi sila ke-4 Pancasila. Nilai ini
-    berfungsi sebagai perekat sosial yang menjaga persatuan,
-    memperkuat solidaritas, serta menciptakan tatanan masyarakat yang
-    demokratis, beradab, dan berkeadilan.
-  </p>
-</div>
-
+    <div class="reference">
+      <strong>Sumber Referensi:</strong>
+      <ul>
+        <li>Kementerian Pendidikan dan Kebudayaan RI. (2018). <i>Buku Guru Pendidikan Pancasila dan Kewarganegaraan Kelas X</i>. Jakarta: Kemendikbud.</li>
+        <li>Lickona, Thomas. (1991). <i>Educating for Character: How Our Schools Can Teach Respect and Responsibility</i>. New York: Bantam Books.</li>
+      </ul>
+    </div>
+  </div>
 
 </section>
 
 <footer>
   © 2026 Musyawarah Crew | Projek Pancasila
 </footer>
-
 
 <script>
 const navbar = document.getElementById("navbar");
